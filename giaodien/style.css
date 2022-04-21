@@ -20,10 +20,24 @@ a {
 
 /* header */
 header {
-    display    : flex;
-    padding    : 12px 50px;
-    height     : 70px;
-    align-items: center;
+    display         : flex;
+    padding         : 12px 50px;
+    height          : 70px;
+    align-items     : center;
+    position        : fixed;
+    top             : 0;
+    left            : 0;
+    width           : 100%;
+    z-index         : 1;
+    background-color: rgba(225, 225, 225, 0.4);
+}
+
+header:hover {
+    background-color: #fff;
+}
+
+.sticky {
+    background-color: #fff;
 }
 
 .logo {
@@ -44,12 +58,14 @@ header {
 
 
 .sub-menu {
-    position  : absolute;
-    width     : 150px;
-    border    : 1px solid #ccc;
-    padding   : 10px 0 10px 10px;
-    visibility: hidden;
-    top       : 50px;
+    position        : absolute;
+    width           : 150px;
+    border          : 1px solid #ccc;
+    padding         : 10px 0 10px 10px;
+    visibility      : hidden;
+    top             : 50px;
+    z-index         : 1;
+    background-color: #fff;
 }
 
 .sub-menu>li>a {
@@ -60,6 +76,7 @@ header {
 
 .sub-menu ul {
     padding-left: 20px;
+
 }
 
 .menu>li>a {
@@ -72,7 +89,7 @@ header {
 .menu li:hover .sub-menu {
     visibility: visible;
     top       : 30px;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 .others {
@@ -81,7 +98,25 @@ header {
 }
 
 .others>li {
-    padding: 0 10px;
+    padding : 0 10px;
+    cursor  : pointer;
+    position: relative;
+}
+
+.others>li::after {
+    content   : "";
+    display   : block;
+    width     : 1px;
+    height    : 80%;
+    background: #ddd;
+    position  : absolute;
+    right     : 0;
+    top       : 50%;
+    transform : translateY(-50%);
+}
+
+.others>li:last-child::after {
+    display: none;
 }
 
 .others>li:first-child {
@@ -92,6 +127,8 @@ header {
     width        : 100%;
     border       : none;
     border-bottom: 1px solid #333;
+    background   : transparent;
+    outline      : none;
 
 }
 
@@ -144,4 +181,102 @@ header {
 
 .dot.active {
     background-color: #333;
+}
+
+/* App */
+.app-container {
+    text-align : center;
+    align-items: center;
+    padding    : 50px 0 50px 0;
+}
+
+.app-google {
+    margin: 50px;
+}
+
+.app-google img {
+    height: 50px;
+    cursor: pointer;
+}
+
+.app-container p {
+    line-height   : 20px;
+    letter-spacing: 1px;
+    font-size     : 17px;
+    color         : #000;
+    font-weight   : bold;
+}
+
+.app-container input {
+    margin-top    : 30px;
+    border        : none;
+    border-bottom : 1px solid #ccc;
+    padding-bottom: 10px;
+    width         : 400px;
+    position      : relative;
+    text-align    : center;
+    outline       : none;
+}
+
+.app-container i {
+    position: relative;
+    right   : 20px;
+}
+
+.app-container i {
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+}
+
+.footer-top {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    margin-bottom  : 20px;
+    height         : 70px;
+}
+
+.footer-top img {
+    height: 50px;
+
+}
+
+.footer-top li {
+    padding : 0 10px;
+    position: relative;
+}
+
+.footer-top li::after {
+    content   : "";
+    display   : block;
+    width     : 1px;
+    height    : 80%;
+    background: #333;
+    position  : absolute;
+    right     : 0;
+    top       : 50%;
+    transform : translateY(-50%);
+}
+
+.footer-top li:last-child::after {
+    display: none;
+}
+
+.footer-top li:last-child a {
+    margin-right: 10px;
+}
+
+.footer-content {
+    margin-bottom: 30px;
+}
+
+.footer-bottom {
+    background-color: rgba(225, 225, 225, 0.4);
+    height          : 50px;
+    text-align      : center;
+    line-height     : 50px;
 }
