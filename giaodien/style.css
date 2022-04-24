@@ -466,6 +466,7 @@ footer {
 
 .product-content-left-small-img img {
     width: 100%;
+    cursor: pointer;
 
 }
 
@@ -548,13 +549,13 @@ footer {
 }
 
 .product-content-right-product-button button {
-    width  : 150px;
-    height : 40px;
-    display: block;
-    margin : 20px 0 12px;
-    transition: all 0.3s ease;
+    width      : 150px;
+    height     : 40px;
+    display    : block;
+    margin     : 20px 0 12px;
+    transition : all 0.3s ease;
     font-family: var(--main-text-font);
-    font-size: 14px;
+    font-size  : 14px;
 }
 
 .product-content-right-product-button button:first-child {
@@ -564,41 +565,98 @@ footer {
     background-color: #fff;
     border          : 2px solid black;
     cursor          : pointer;
- 
+
 }
+
 .product-content-right-product-button button:first-child:hover {
-   
+
     background-color: #000;
-    color: #fff;
-    
+    color           : #fff;
+
 }
+
 .product-content-right-product-button button:last-child {
-   
+
     border          : 2px solid #BF8a49;
-    color: #BF8a49;
+    color           : #BF8a49;
     background-color: #fff;
-    cursor: pointer;
+    cursor          : pointer;
 }
+
 .product-content-right-product-icon {
-    display:  flex;
+    display   : flex;
     margin-top: 20px;
 }
+
 .product-content-right-product-icon-item {
-    display: flex;
-    margin-right: 12px;
+    display        : flex;
+    margin-right   : 12px;
     justify-content: center;
-    align-items: center;
+    align-items    : center;
 }
+
 .product-content-right-product-icon-item i {
-    font-size: 14px;
+    font-size   : 14px;
     margin-right: 5px;
 }
+
 .product-content-right-product-icon-item p {
     font-size: 14px;
-   
+
     font-family: var(--main-text-font);
 }
+
 .product-content-right-product-qr {
     margin: 20px 0;
 }
 
+.product-content-right-bottom {
+    padding-top: 40px;
+    border-top : 1px solid #ddd;
+    position   : relative;
+}
+
+.product-content-right-bottom-top {
+    position        : absolute;
+    width           : 30px;
+    height          : 30px;
+    border          : 1px solid #ddd;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    border-radius   : 50%;
+    top             : -15px;
+    left            : 50%;
+    background-color: #fff;
+    transform       : translateX(-50%);
+    cursor: pointer;
+}
+
+.product-content-right-bottom-content-title {
+    border-bottom: 1px solid #ddd;
+
+}
+
+.product-content-right-bottom-content-title-item {
+    margin-right: 6px;
+    cursor      : pointer;
+    padding     : 6px;
+    font-family : var(--main-text-font);
+    font-size   : 16px;
+}
+
+.product-content-right-bottom-content {
+    margin-top: 30px;
+}
+
+.product-content-right-bottom-content {
+    font-family: var(--main-text-font);
+    font-size  : 14px;
+}
+
+.product-content-right-bottom-content-baoquan {
+    display: none;
+}
+.activeB {
+    display: none;
+}
